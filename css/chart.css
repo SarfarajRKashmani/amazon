@@ -1,0 +1,41 @@
+body{
+    margin:center;
+    box-sizing: border-box; 
+    
+  }
+  .align-items{
+    justify-content: center;
+    align-items: center;
+}
+  .box{
+    margin: 30px;
+    height: 600px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: bisque;
+    align-items: center;
+  }
+  h2 {
+    padding: 10px;
+    color: black;
+  }
+  .charts{
+    display: flex;
+    padding: 25px;
+  padding-top: 15px;
+  }
+  .mychart1{
+    margin-right: 100px;
+    background: #4d3e3e;
+    border-radius: 5px;
+    padding:0 10 10 0;
+  }
+  .mychart3{
+   
+    height: 300px;
+    width: 400px;
+  }
+  
+  section{
+    display: flex;
+  }

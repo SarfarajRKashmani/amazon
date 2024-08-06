@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="nbarr"></div> 
+
+<div class="flex items-center justify-center p-2 bg-gray-100">
+    <div class="w-full max-w-sm mx-auto bg-white shadow-md rounded-md p-6">
+        <div class="flex justify-center mb-6">
+        <a href="/index.html">   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="h-10"></a> 
+        </div>
+        <h2 class="text-2xl font-semibold text-center mb-4">Create Account</h2>
+        <p class="text-center mb-6">
+            Already a customer? <a href="/pages/login.html" class="text-blue-600 hover:underline">Sign in</a>
+        </p>
+        <form id="data">
+            
+            <div class="mb-4">
+                <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile number</label>
+                <div class="mt-1 flex">
+                    <select id="country-code" name="country-code" class="rounded-l-md border border-gray-300 bg-gray-50 p-2">
+                        <option value="IN">IN +91</option>
+                    </select>
+                    <input  type="text" id="mobile" name="mobile" class="flex-1 rounded-r-md border border-gray-300 p-2" placeholder="Mobile No.">
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Your name</label>
+                <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border border-gray-300 p-2" placeholder="First and last name">
+            </div>
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="text" id="email" name="name" class="mt-1 block w-full rounded-md border border-gray-300 p-2" placeholder="Enter Email">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password (at least 6 characters)</label>
+                <input type="password" id="password" name="password" class="mt-1 block w-full rounded-md border border-gray-300 p-2" placeholder="Password">
+                <p class="text-xs text-gray-500 mt-1">Passwords must be at least 6 characters.</p>
+            </div>
+            <div class="mb-4">
+                <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 rounded-md">Sign Up</button>
+            </div>
+            <p class="text-sm text-gray-500">By creating an account or logging in, you agree to Amazon's <a href="#" class="text-blue-600 hover:underline">Conditions of Use</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Notice</a>.</p>
+        </form>
+    </div>
+    
+</div>
+
+<div id="footr" style="position: fixed!important; bottom:0; width: 100%;"></div>
+</body>
+<script type="module" src="/js/signup.js"></script>
+</html>

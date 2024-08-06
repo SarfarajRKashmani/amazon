@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+</head>
+
+<body>
+  <div id="nbarr"></div>
+  <div class="container-fluid m-3">
+    <div class="row">
+      <div class="col-md-3 col-12" id="Filter">
+        <div class="card">
+          <div class="card-body" style="
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+              ">
+            <h5 class="card-title mb-4 fw-bold">Filters</h5>
+
+            <form id="filterFormPrice">
+              <h6 class="mb-3 fw-bold">Price</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="price" value="HTL" id="priceHTL" />
+                <label class="form-check-label" for="priceHTL">Higher to Lower</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="price" value="LTH" id="priceLTH" />
+                <label class="form-check-label" for="priceLTH">Lower to Higher</label>
+              </div>
+            </form>
+
+            <form id="filterFormCategory">
+              <h6 class="mt-4 mb-3 fw-bold">Category</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="All" name="category" id="categoryAll" />
+               
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="beauty" name="category" id="categoryMen" />
+                <label class="form-check-label" for="categoryMen">Beauty</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="fragrances" name="category" id="categoryWomen" />
+                <label class="form-check-label" for="categoryWomen">Fragrances</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="furniture" name="category" id="categoryChild" />
+                <label class="form-check-label" for="categoryChild">Furniture</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="groceries" name="category" id="categoryTech" />
+                <label class="form-check-label" for="categoryTech">Groceries</label>
+              </div>
+            </form>
+
+            <button class="btn btn-primary w-100 mt-4 fs-6 border-2" id="btn-filter">
+              Apply Filters
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-9 col-12">
+      <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4" id="card-head"></div>
+    </div>
+  </div>
+  </div>
+  <div id="footr"></div>
+</body>
+<script type="module" src="/js/products.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>

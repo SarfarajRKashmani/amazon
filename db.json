@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "1111",
+      "name": "sarfaraj",
+      "email": "sarfrajkashmani5@gmail.com",
+      "password": "1234567890"
+    }
+    
+  ],
+  "cart": [],
+  "products": [],
+  "orders": []
+}
