@@ -1,4 +1,4 @@
- const nbar=()=>{
+const nbar = (productscount) => {
     return `  <div class="navbarr ">
      <!-- nav-box-1 -->
           <a href="/index.html" class="nav-logo ">
@@ -17,10 +17,14 @@
                     <select class="search-select">
                          <option>All</option>
                     </select>
-                    <input placeholder="Search Amazon" class="search-input">
+                     <form class="d-flex" role="search"  id="search">
+                    <input placeholder="Search Amazon" type="search" class="search-input" id="searchValue">
                     <div class="search-icon">
+                    <button  class="btn" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
+                    </form>
                 </div>
                  <!-- nav-box-4 -->
                  <div class="flag bod">
@@ -42,9 +46,12 @@
                       </div>
                   </div>
                     <!-- nav-box-7 -->
-                    <div class="cart bod ">
+                    <div id="logcart" class="cart bod position-relative">
+                    <span id="count" class="position-absolute top-0 start-100 translate-middle bg-dark badge rounded-pill bg-danger">
+                    0
+                     </span>
                       <a href="/pages/cart.html"> <i class="fa-solid fa-cart-shopping"></i>
-                        Cart</a> 
+                        </a> 
                     </div>  
                      </div>
                      <head> 
@@ -64,7 +71,7 @@
     </div>
         </head>`
 }
-const nbar_styles=()=>{
+const nbar_styles = () => {
     return `*{}
     .bod{
     border: 1px solid transparent;
@@ -153,7 +160,7 @@ const nbar_styles=()=>{
     border: none;
 }
 .search-input{
-    width: 100%;
+    width: 520px;
     border: none;
     font-size: 1rem;
 }
@@ -201,7 +208,7 @@ border-bottom-right-radius: 3px;
     color: white;
 }`
 }
-const fot =()=>{
+const fot = () => {
     return ` <div class="foot text-white">
             <div class="foot-pl-3">
                 <div class="logo6"></div>
@@ -211,4 +218,4 @@ const fot =()=>{
             </div>
         </div>`
 }
-export { nbar , nbar_styles, fot} 
+export { nbar, nbar_styles, fot } 
