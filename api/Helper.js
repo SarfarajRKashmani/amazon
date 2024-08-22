@@ -1,4 +1,4 @@
-export const createElement = (tag, innerHTML = "", attributes = {}) => {
+export const createEle = (tag, innerHTML = "", attributes = {}) => {
   const element = document.createElement(tag);
   element.innerHTML = innerHTML;
   for (const [key, value] of Object.entries(attributes)) {
@@ -7,9 +7,14 @@ export const createElement = (tag, innerHTML = "", attributes = {}) => {
   return element;
 };
 
-export const getValue = (id) => {
+export const getVal = (id) => {
   return document.getElementById(id).value;
 };
  export const getele=(id)=>{
   return document.getElementById(id);
  }
+ export const createTag=(tagname,value)=>{
+  let tag=document.createElement(tagname)
+  tagname=="img" ? tag.src=value :tag.innerHTML=value
+  return tag
+}

@@ -13,3 +13,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const foot=getele("footr")
 foot.innerHTML=fot();
+// xxxxxxxxxxxxxxxx  nav-foot  xxxxxxxxxxxx
+// cart -----xxxxxxxx--------
+import { cart_api } from "../api/cart_api.js";
+ let cart = await cart_api.get()
+getele("count").innerHTML=cart.length
+// cart -----xxxxxxxx--------
+
+let isLogin=JSON.parse(localStorage.getItem("isLogin"))||false;
+
+const logg=()=>{
+    if(isLogin){
+        getele("nbarr").innerHTML=nbar("logout","")
+        getele("log").addEventListener("click",()=>{
+            localStorage.setItem("isLogin",false)
+        })
+        getele("count").innerHTML=cart.length
+    }else{
+        window.location.href="./pages/login.html"
+    }
+}
+logg()

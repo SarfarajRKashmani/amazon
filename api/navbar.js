@@ -1,4 +1,7 @@
-const nbar = (productscount) => {
+
+const nbar =(login="Login", num=0) => {
+
+
     return `  <div class="navbarr ">
      <!-- nav-box-1 -->
           <a href="/index.html" class="nav-logo ">
@@ -28,18 +31,18 @@ const nbar = (productscount) => {
                 </div>
                  <!-- nav-box-4 -->
                  <div class="flag bod">
-                    <img src="images/flag.png" alt="">
+                    <img src="/images/flag.png" alt="">
                        EN
                        <i class="fa-solid fa-caret-down"></i>
                  </div>
                   <!-- nav-box-5 -->
-                  <div class="bod">
-                    <a href="/pages/login.html" class="signin">Hello,sign in</a>
+                  <div class="bod" id="log">
+                    <a href="/pages/login.html" id="logg" class="signin">${login}</a>
                     <div class="boxx5"> <a>Accounts & lists</a> 
                         <i class="fa-solid fa-caret-down"></i>
                       </div>
                   </div>
-                   <!-- nav-box-6 -->
+       <!-- nav-box-6 -->
                    <div class="bod nav-add">
                     <p class="signin">Returns</p>
                     <div class="boxx5"><a>& Orders</a>
@@ -47,10 +50,10 @@ const nbar = (productscount) => {
                   </div>
                     <!-- nav-box-7 -->
                     <div id="logcart" class="cart bod position-relative">
-                    <span id="count" class="position-absolute top-0 start-100 translate-middle bg-dark badge rounded-pill bg-danger">
-                    0
+                     <span id="count"  class="position-absolute top-0 start-100 translate-middle bg-dark badge rounded-pill bg-danger">
+                    ${num}
                      </span>
-                      <a href="/pages/cart.html"> <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="/pages/cart.html"> <i class="fa-solid fa-cart-shopping" id="cartCount"></i>
                         </a> 
                     </div>  
                      </div>
@@ -67,7 +70,7 @@ const nbar = (productscount) => {
         <a class="bod">Prime<i class="fa-solid fa-caret-down"></i></a>
         <a class="bod">Home & Kitchen</a>
         <a class="bod" href="/pages/chart.html">Dashboard</a>
-        <img class="" src="images/head.jpg" alt="">
+        <img class="" src="/images/head.jpg" alt="">
     </div>
         </head>`
 }
@@ -214,7 +217,7 @@ const fot = () => {
                 <div class="logo6"></div>
                 <div class="icon"><i class="fa-solid fa-globe"></i> English</div>
                 <div class="icon2"><i class="fa-regular fa-dollar-sign"></i> USD-Us-Doller</div>
-                <div class="flag"><img src="images/flag.png" alt=""> India</div>
+                <div class="flag"><img src="/images/flag.png" alt=""> India</div>
             </div>
         </div>`
 }

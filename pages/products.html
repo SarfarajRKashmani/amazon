@@ -11,8 +11,6 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 <style>
   .card{
-  --bs-card-border-width:none !important;
-  --bs-card-border-width:none !important;
   background-color: #212529 !important;
 }
 p{
@@ -35,41 +33,41 @@ p{
 
             <form id="filterFormPrice">
               <h6 class="mb-3 fw-bold">Price</h6>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="price" value="HTL" id="priceHTL" />
-                <label class="form-check-label" for="priceHTL">Higher to Lower</label>
+              <div>
+                <input  type="radio" name="price" value="HTL" id="htl" />
+                <label  for="htl">HTL</label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="price" value="LTH" id="priceLTH" />
-                <label class="form-check-label" for="priceLTH">Lower to Higher</label>
+              <div >
+                <input class="form-in" type="radio" name="price" value="LTH" id="lth" />
+                <label  for="lth">LTH</label>
               </div>
             </form>
 
             <form id="filterFormCategory">
               <h6 class="mt-4 mb-3 fw-bolder font-monospace ">Category</h6>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="All" name="category" id="categoryAll" />
-                <label class="form-check-label" for="categoryAll">All Category </label>
+              <div >
+                <input class="form-in" type="checkbox" value="All" name="category" id="categoryAll" />
+                <label  for="categoryAll">All Category </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="beauty" name="category" id="categoryMen" />
-                <label class="form-check-label" for="categoryMen">Beauty</label>
+              <div >
+                <input class="form-in" type="checkbox" value="beauty" name="category" id="categoryMen" />
+                <label  for="categoryMen">Beauty</label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox"value="fragrances" name="category" id="categoryWomen" />
-                <label class="form-check-label" for="categoryWomen">Fragrances</label>
+              <div>
+                <input class="form-in" type="checkbox"value="fragrances" name="category" id="categoryWomen" />
+                <label for="categoryWomen">Fragrances</label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="furniture" name="category" id="categoryChild" />
-                <label class="form-check-label" for="categoryChild">Furniture</label>
+              <div>
+                <input class="form-in" type="checkbox" value="furniture" name="category" id="categoryChild" />
+                <label for="categoryChild">Furniture</label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="groceries" name="category" id="categoryTech" />
-                <label class="form-check-label" for="categoryTech">Groceries</label>
+              <div>
+                <input class="form-in" type="checkbox" value="groceries" name="category" id="categoryTech" />
+                <label for="categoryTech">Groceries</label>
               </div>
             </form>
 
-            <button class="btn btn-outline-dark w-100 mt-4 fs-6 border-2" id="btn-filter">
+            <button class="btn btn-outline-light w-100 mt-4 fs-6 border-1" id="btn-filter">
               Apply Filters
             </button>
           </div>

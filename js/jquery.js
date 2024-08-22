@@ -8,7 +8,7 @@ var nextButton = document.querySelector("#nextButton");
 
 for (var i = 0; i < slides.length; i++) {
   TweenLite.set(slides[i], {
-    backgroundColor: Math.random() * 0xffffff,
+    // backgroundColor: Math.random() * 0xffffff,
     xPercent: i * 100
   });
 }
@@ -17,13 +17,13 @@ var wrap = wrapPartial(-100, (slides.length - 1) * 100);
 var timer = TweenLite.delayedCall(slideDelay, autoPlay);
 var animation = null;
 
-prevButton.addEventListener("click", function () {
-  animateSlides(100);
-});
+// prevButton.addEventListener("click", function () {
+//   animateSlides(100);
+// });
 
-nextButton.addEventListener("click", function () {
-  animateSlides(-100);
-});
+// nextButton.addEventListener("click", function () {
+//   animateSlides(-100);
+// });
 
 function animateSlides(delta) {
   animation = TweenMax.to(slides, slideDuration, {
