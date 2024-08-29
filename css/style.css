@@ -288,3 +288,35 @@ body {
         font-size: 22px;
     }
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+.thumbnail{
+    height: 5rem;
+    width: 5rem;
+    box-shadow: 1px 1px
+}
+.trbox{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 2px !important;
+    height: 70px;
+    width: 500px;
+}

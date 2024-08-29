@@ -1,5 +1,5 @@
 import { nbar, nbar_styles } from "../api/navbar.js";
-import { createEle, getele } from "../api/Helper.js";
+import { createEle, getele, getVal } from "../api/Helper.js";
 import { fot } from "../api/navbar.js";
 import { cart_api } from "../api/cart_api.js";
 
@@ -35,6 +35,7 @@ let data = [];
 
 const API = async () => {
   let request = await fetch("https://json-server-deployment-mxgi.onrender.com/products");
+  // let request = await fetch("https://dummyjson.com/products/search?q=phone");
   let response = await request.json();
   // console.log(response);
   display(response);

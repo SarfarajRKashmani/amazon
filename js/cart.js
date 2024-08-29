@@ -34,31 +34,33 @@ getele("count").innerHTML=cart.length
 
 // console.log(cart);
 
-const hdlqt = (index, ele,opr) => {
-
-   if(opr=="+"){
-    ele.qty+=1
-    cart_api.patch(index,ele)
-    console.log(ele);
-    
-   }
-    Mapper(cart)
-}
+const hdlqt = (index, ele, opr) => {
+    if (opr === "+") {
+        ele.qty += 1;
+    } else if (opr === "-" && ele.qty > 1) {
+        ele.qty -= 1;
+        ele.qty<1?alert("Qty should be more than 1"):""
+    }
+    cart_api.patch(index, ele);
+    Mapper(cart);
+};
 
 import { createTag } from "../api/Helper.js";
 
 const Mapper = (cart) => {
     document.getElementById("list").innerHTML = ""
     cart.map((item, i) => {
-        console.log(item.id);
         
         let td1 = document.createElement("td")
-        let img = createTag("img", item.img)
+        let img = createTag("img", item.thumbnail)
+        img.setAttribute("class","thumbnail")
         td1.append(img)
-        let td2 = createTag("td", item.title)
+        
         let td3 = createTag("td", item.category)
-        let td4 = createTag("td", item.price)
+        td3.setAttribute("class","name")
+        let td4 = createTag("td",  "$"+" "+item.price)
         let td5 = document.createElement("td")
+        // .setAttribute("class","btn rounded")
 
         let btn1 = createTag("button", "-")
         let btn2 = createTag("button", item.qty)
@@ -67,24 +69,25 @@ const Mapper = (cart) => {
         btn1.addEventListener("click", () => hdlqt(item.id,item, "-"))
         btn3.addEventListener("click", () => hdlqt(item.id,item, "+"))
         td5.append(btn1, btn2, btn3)
-        let td6 = createTag("td", item.price * item.qty)
+        let td6 = createTag("td", "$"+" "+Math.round(item.price * item.qty *100) / 100) 
         let td7 = document.createElement("td")
         let btn = createTag("button", "remove")
         btn.addEventListener("click", () => handleDelete(item.id))
+        btn.setAttribute("class","rounded")
         td7.append(btn)
         let tr = document.createElement("tr")
-        tr.append(td1, td2, td3, td4, td5, td6, td7)
+        tr.setAttribute("class","trbox")
+        tr.append(td1, td3, td4, td5, td6, td7)
 
         getele("list").append(tr)
-
     })
 }
-
 Mapper(cart)
 
 const handleDelete = (id) => {
-    cart_api.delete(id)
-    cart_api.get()
-    getele("count").innerHTML=cart.length
-    Mapper(cart)
-}
+    cart = cart.filter(item => item.id !== id);
+    cart_api.delete(id);
+    getele("count").innerHTML = cart.length;
+    Mapper(cart);
+};
+
